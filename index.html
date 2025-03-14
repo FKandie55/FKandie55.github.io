@@ -479,184 +479,259 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-8 text-center animate__animated animate__fadeIn">
-                    <h2>Contact Me</h2>
-                    <hr>
-                    <p>Have a project in mind? Let's talk about how I can help you achieve your goals.</p>
-                </div>
+<section id="contact">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center animate__animated animate__fadeIn">
+                <h2>Contact Me</h2>
+                <hr>
+                <p>Have a project in mind? Let's talk about how I can help you achieve your goals.</p>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8 animate__animated animate__fadeInUp" data-wow-delay="0.3s">
-                    <form class="contact-form">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Your Email">
-                            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <input type="hidden" name="access_key" value="13cd25e8-27ea-4968-ac0c-398408ae9027">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
-                        <input type="text" class="form-control" placeholder="Subject">
-                        <textarea class="form-control" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
+                        <div class="col-md-6">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-x"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-            <p>Copyright &copy; 2025 Felix Kandie. All Rights Reserved.</p>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/FKandie55"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/felixkandie_"><i class="fab fa-x"></i></a>
+            <a href="https://www.instagram.com/felixkandie_"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/FKandie55"><i class="fab fa-github"></i></a>
         </div>
-    </footer>
+        <p>Copyright &copy; 2025 Felix Kandie. All Rights Reserved.</p>
+    </div>
+</footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
-    <!-- Add the modal script -->
-    <script src="js/project_modal.js"></script>
-    <script>
-        // Preloader
-        $(window).on('load', function() {
-            $('.preloader').fadeOut(1000);
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+<!-- Add the modal script -->
+<script src="js/project_modal.js"></script>
+<script>
+    // Preloader
+$(window).on('load', function() {
+    $('.preloader').fadeOut(1000);
+});
+
+// Sticky navbar
+$(window).on('scroll', function() {
+    if ($(this).scrollTop() > 100) {
+        $('.custom-navbar').addClass('sticky');
+    } else {
+        $('.custom-navbar').removeClass('sticky');
+    }
+});
+
+// Smooth scrolling
+document.querySelectorAll('a.nav-link, a.navbar-brand, a.btn').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId !== '#') {
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});
+
+// Portfolio filtering
+document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
         });
 
-        // Sticky navbar
-        $(window).on('scroll', function() {
-            if ($(this).scrollTop() > 100) {
-                $('.custom-navbar').addClass('sticky');
+        // Add active class to clicked button
+        this.classList.add('active');
+
+        const filter = this.getAttribute('data-filter');
+        const items = document.querySelectorAll('.portfolio-item');
+
+        items.forEach(item => {
+            if (filter === 'all' || item.classList.contains(filter)) {
+                item.style.display = 'block';
             } else {
-                $('.custom-navbar').removeClass('sticky');
+                item.style.display = 'none';
             }
         });
+    });
+});
 
-        // Smooth scrolling
-        document.querySelectorAll('a.nav-link, a.navbar-brand, a.btn').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href').startsWith('#')) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId !== '#') {
-                        document.querySelector(targetId).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
+// Animation on scroll
+const animateElements = document.querySelectorAll('.animate__animated');
 
-        // Portfolio filtering
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                // Remove active class from all buttons
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
+function checkIfInView() {
+    const windowHeight = window.innerHeight;
+    const windowTopPosition = window.scrollY;
+    const windowBottomPosition = windowTopPosition + windowHeight;
 
-                // Add active class to clicked button
-                this.classList.add('active');
+    animateElements.forEach(element => {
+        const elementHeight = element.offsetHeight;
+        const elementTopPosition = element.offsetTop;
+        const elementBottomPosition = elementTopPosition + elementHeight;
 
-                const filter = this.getAttribute('data-filter');
-                const items = document.querySelectorAll('.portfolio-item');
+        // Check if element is in view
+        if (
+            elementBottomPosition >= windowTopPosition && 
+            elementTopPosition <= windowBottomPosition
+        ) {
+            // If element doesn't have any animation delay
+            if (!element.dataset.wowDelay) {
+                element.classList.add('animate__fadeIn');
+            }
+        }
+    });
+}
 
-                items.forEach(item => {
-                    if (filter === 'all' || item.classList.contains(filter)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
+// Run check on scroll and on page load
+window.addEventListener('scroll', checkIfInView);
+window.addEventListener('load', checkIfInView);
 
-        // Animation on scroll
-        const animateElements = document.querySelectorAll('.animate__animated');
-        
-        function checkIfInView() {
-            const windowHeight = window.innerHeight;
-            const windowTopPosition = window.scrollY;
-            const windowBottomPosition = windowTopPosition + windowHeight;
+// Initialize typed.js effect
+document.addEventListener('DOMContentLoaded', function() {
+    const typeText = document.querySelector('.type-text');
+    if (typeText) {
+        const roles = ['Web Developer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer'];
+        let currentRole = 0;
+        let currentChar = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
 
-            animateElements.forEach(element => {
-                const elementHeight = element.offsetHeight;
-                const elementTopPosition = element.offsetTop;
-                const elementBottomPosition = elementTopPosition + elementHeight;
+        function typeWriter() {
+            const role = roles[currentRole];
+            
+            if (isDeleting) {
+                typeText.textContent = role.substring(0, currentChar - 1);
+                currentChar--;
+                typingSpeed = 50;
+            } else {
+                typeText.textContent = role.substring(0, currentChar + 1);
+                currentChar++;
+                typingSpeed = 100;
+            }
 
-                // Check if element is in view
-                if (
-                    elementBottomPosition >= windowTopPosition && 
-                    elementTopPosition <= windowBottomPosition
-                ) {
-                    // If element doesn't have any animation delay
-                    if (!element.dataset.wowDelay) {
-                        element.classList.add('animate__fadeIn');
-                    }
-                }
-            });
+            if (!isDeleting && currentChar === role.length) {
+                isDeleting = true;
+                typingSpeed = 1000;
+            } else if (isDeleting && currentChar === 0) {
+                isDeleting = false;
+                currentRole = (currentRole + 1) % roles.length;
+                typingSpeed = 500;
+            }
+
+            setTimeout(typeWriter, typingSpeed);
         }
 
-        // Run check on scroll and on page load
-        window.addEventListener('scroll', checkIfInView);
-        window.addEventListener('load', checkIfInView);
-
-        // Initialize typed.js effect
-        document.addEventListener('DOMContentLoaded', function() {
-            const typeText = document.querySelector('.type-text');
-            if (typeText) {
-                const roles = ['Web Developer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer'];
-                let currentRole = 0;
-                let currentChar = 0;
-                let isDeleting = false;
-                let typingSpeed = 100;
-
-                function typeWriter() {
-                    const role = roles[currentRole];
-                    
-                    if (isDeleting) {
-                        typeText.textContent = role.substring(0, currentChar - 1);
-                        currentChar--;
-                        typingSpeed = 50;
-                    } else {
-                        typeText.textContent = role.substring(0, currentChar + 1);
-                        currentChar++;
-                        typingSpeed = 100;
-                    }
-
-                    if (!isDeleting && currentChar === role.length) {
-                        isDeleting = true;
-                        typingSpeed = 1000;
-                    } else if (isDeleting && currentChar === 0) {
-                        isDeleting = false;
-                        currentRole = (currentRole + 1) % roles.length;
-                        typingSpeed = 500;
-                    }
-
-                    setTimeout(typeWriter, typingSpeed);
-                }
-
-                typeWriter();
-            }
-        });
-
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        typeWriter();
+    }
+    
+    // Contact form submission handler
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Add form submission logic here
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
+            
+            const formData = new FormData(this);
+            const formObject = Object.fromEntries(formData);
+            
+            // Create a success message element
+            const successMessage = document.createElement('div');
+            successMessage.className = 'alert alert-success mt-3 animate__animated animate__fadeIn';
+            successMessage.innerHTML = '<i class="fas fa-check-circle me-2"></i>Thank you for your message! I will get back to you soon.';
+            
+            // Create a loading indicator
+            const loadingIndicator = document.createElement('div');
+            loadingIndicator.className = 'text-center mt-3';
+            loadingIndicator.innerHTML = '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>';
+            
+            // Append loading indicator after the form
+            contactForm.insertAdjacentElement('afterend', loadingIndicator);
+            
+            // Disable the submit button
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            
+            // Send the form data to Web3Forms
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formObject)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Remove loading indicator
+                loadingIndicator.remove();
+                
+                if (data.success) {
+                    // Clear the form
+                    contactForm.reset();
+                    
+                    // Show the success message
+                    contactForm.insertAdjacentElement('afterend', successMessage);
+                    
+                    // Remove the success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.classList.add('animate__fadeOut');
+                        setTimeout(() => {
+                            successMessage.remove();
+                        }, 1000);
+                    }, 5000);
+                } else {
+                    // Show error message
+                    const errorMessage = document.createElement('div');
+                    errorMessage.className = 'alert alert-danger mt-3';
+                    errorMessage.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i>Something went wrong. Please try again.';
+                    contactForm.insertAdjacentElement('afterend', errorMessage);
+                }
+                
+                // Re-enable the submit button
+                submitButton.disabled = false;
+            })
+            .catch(error => {
+                // Remove loading indicator
+                loadingIndicator.remove();
+                
+                // Show error message
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'alert alert-danger mt-3';
+                errorMessage.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i>Something went wrong. Please try again.';
+                contactForm.insertAdjacentElement('afterend', errorMessage);
+                
+                // Re-enable the submit button
+                submitButton.disabled = false;
+                
+                console.error('Error:', error);
+            });
         });
-    </script>
-</body>
-</html>
+    }
+});
+</script>
