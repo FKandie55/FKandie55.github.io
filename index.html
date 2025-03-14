@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Felix Kandie | Web Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="web developer, portfolio, frontend, backend, full stack">
+    <meta name="description" content="Professional web development portfolio showcasing projects and skills">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add the modal styles -->
+    <link rel="stylesheet" href="css/project_modal.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <div class="loading-text">Felix Kandie</div>
+    </div>
+
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-lg custom-navbar navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Felix Kandie<span class="text-primary"></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#location">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <!-- Add a column for your photo -->
+                <div class="col-md-5 home-img animate__animated animate__fadeIn">
+                    <img src="img/felix_kandie.jpg" alt="Felix Kandie" class="img-fluid rounded-circle shadow">
+                    <!-- Replace the placeholder with your actual image path when you have one -->
+                </div>
+                <!-- Adjust the column size for text content -->
+                <div class="col-md-7 home-content animate__animated animate__fadeIn">
+                    <h1>I Create Beautiful Digital Experiences</h1>
+                    <h2>I'm a <span class="type-text">Web Developer</span></h2>
+                    <div class="d-flex align-items-center mt-4">
+                        <a href="#portfolio" class="btn me-3">Portfolio</a>
+                        <a href="https://wa.me/+254703882818" class="whatsapp-btn" target="_blank">
+                            <div class="whatsapp-icon">
+                                <i class="fab fa-whatsapp"></i>
+                                <div class="whatsapp-wave"></div>
+                                <div class="whatsapp-wave"></div>
+                                <div class="whatsapp-wave"></div>
+                            </div>
+                            <span>0703882818</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center animate__animated animate__fadeIn">
+                    <h2>My Services</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>System Development</h4>
+                        <p>I design and develop custom web applications and software systems tailored to your business needs. From database architecture to API integration, I create scalable solutions that streamline your operations and boost productivity.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Responsive Design</h4>
+                        <p>I create websites that look and function perfectly on all devices - from desktops to smartphones. Using modern CSS frameworks and best practices, I ensure your site provides an optimal viewing experience with easy navigation and minimal resizing.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>E-Commerce</h4>
+                        <p>I develop comprehensive online shopping platforms with secure payment processing, inventory management, and user-friendly interfaces. Whether you need a small boutique shop or a large marketplace, I can build a solution that drives sales and enhances customer experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp" data-wow-delay="0.8s">
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Graphic Design</h4>
+                        <p>I create visually compelling designs for web and print, including logos, branding materials, UI elements, and marketing assets. Using professional tools like Photoshop, Illustrator, and Corel Draw, I deliver high-quality graphics that enhance your brand identity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center animate__animated animate__fadeIn">
+                    <h2>Work Experience</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 animate__animated animate__fadeInRight">
+                    <div class="resume-section">
+                        <div class="resume-item">
+                            <h4>ICT Technician</h4>
+                            <h5>A.I.C Cheptebo Rural Development Centre</h5>
+                            <div class="date"><i class="far fa-calendar-alt me-2"></i>July 2023 - Present</div>
+                            <ul>
+                                <li>System Implementation Oversight: Overseeing the design and development phases of the organizational system</li>
+                                <li>Network Infrastructure Enhancement: Installation and configuration of routers and Wi-Fi networks</li>
+                                <li>CCTV Camera Installation and Maintenance for facility security</li>
+                                <li>Audiovisual Setup: Managing projectors for conference meetings</li>
+                                <li>Graphic Design: Creating promotional materials for the organization</li>
+                                <li>System Training and Support for staff members</li>
+                                <li>Photography: Capturing high-quality advertisement photos</li>
+                                <li>Monthly Sales Reports: Developing automated scripts for report generation</li>
+                                <li>ICT Innovation: Researching emerging technologies for implementation</li>
+                                <li>Training ICT Attachment Students in technical skills</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resume-item">
+                            <h4>ICT Intern</h4>
+                            <h5>A.I.C Cheptebo Rural Development Centre</h5>
+                            <div class="date"><i class="far fa-calendar-alt me-2"></i>March 2023 - June 2023</div>
+                            <ul>
+                                <li>Training Staff on Management System Usage and best practices</li>
+                                <li>Administrative Support: System administration and user management</li>
+                                <li>Computer and Network Configuration for optimal performance</li>
+                                <li>IT Support: Troubleshooting and software installations</li>
+                                <li>Ethernet Cable and Switch Maintenance for network reliability</li>
+                                <li>Internet Connectivity Management across the facility</li>
+                                <li>Modification of Institutional Systems and Website content</li>
+                                <li>Designing Advert Posters for organization events</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resume-item">
+                            <h4>ICT Attachee</h4>
+                            <h5>Huduma Centre (Elgeyo Marakwet Branch)</h5>
+                            <div class="date"><i class="far fa-calendar-alt me-2"></i>August 2020 - November 2020</div>
+                            <ul>
+                                <li>Maintained and troubleshooted all network and computer related issues</li>
+                                <li>Monitored and maintained computer systems and networks</li>
+                                <li>Tested and evaluated new technology including M&E systems</li>
+                                <li>Helped install and support ICT hardware and software</li>
+                                <li>Integrated and configured computer networking for best performance</li>
+                                <li>Set up new users' accounts and profiles and dealt with password issues</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background-color: #52b7ad; color: white;">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center animate__animated animate__fadeIn">
+                    <h2>My Skills</h2>
+                    <hr>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <div class="skill-box">
+                        <h4><i class="fas fa-code me-2"></i>Front-End</h4>
+                        <ul class="skill-list">
+                            <li>✓ HTML</li>
+                            <li>✓ CSS</li>
+                            <li>✓ JavaScript</li>
+                            <li>✓ Bootstrap</li>
+                            <li>✓ jQuery</li>
+                            <li>✓ FontAwesome</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                    <div class="skill-box">
+                        <h4><i class="fas fa-server me-2"></i>Back-End</h4>
+                        <ul class="skill-list">
+                            <li>✓ PHP</li>
+                            <li>✓ Python</li>
+                            <li>✓ SQLite</li>
+                            <li>✓ MySQL</li>
+                            <li>✓ Node.js</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                    <div class="skill-box">
+                        <h4><i class="fas fa-paint-brush me-2"></i>Graphic Design</h4>
+                        <ul class="skill-list">
+                            <li>✓ Photoshop</li>
+                            <li>✓ Illustrator</li>
+                            <li>✓ Corel Draw</li>
+                            <li>✓ Filmora</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp" data-wow-delay="0.8s">
+                    <div class="skill-box">
+                        <h4><i class="fas fa-network-wired me-2"></i>Networking & Hardware</h4>
+                        <ul class="skill-list">
+                            <li>✓ LAN Installation</li>
+                            <li>✓ Router Configuration</li>
+                            <li>✓ LAN Troubleshooting</li>
+                            <li>✓ OS Troubleshooting (Windows & Linux)</li>
+                            <li>✓ Printer Troubleshooting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center animate__animated animate__fadeIn">
+                    <h2>About Me</h2>
+                    <hr>
+                    <p>Learn more about my skills and expertise in web development</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft" data-wow-delay="0.3s">
+                    <h3>Passionate Web Developer</h3>
+                    <p>I'm a full-stack web developer with over 5 years of experience creating beautiful, functional websites and web applications. I combine technical expertise with creative problem-solving to deliver solutions that help businesses grow online.</p>
+                    <p>My approach is focused on understanding your unique needs and creating customized solutions that align with your goals. I stay updated with the latest technologies and best practices to ensure your project is built using modern, efficient methods.</p>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight" data-wow-delay="0.3s">
+                    <div class="about-image mb-4">
+                        <img src="img/felix.jpg" alt="Felix Kandie working" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center animate__animated animate__fadeIn">
+                    <h2>My Portfolio</h2>
+                    <hr>
+                    <p>Check out some of my recent projects</p>
+                </div>
+            </div>
+
+            <div class="row mb-4 text-center">
+                <div class="col-md-12">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">System Development</button>
+                    <button class="filter-btn" data-filter="app">Graphic Design</button>
+                    <button class="filter-btn" data-filter="design">Web development</button>
+                </div>
+            </div>
+
+            <div class="row portfolio-container">
+                <div class="col-md-4 col-sm-6 portfolio-item web">
+                    <div class="portfolio-wrap">
+                        <!-- Updated image tag to work with the modal system -->
+                        <img src="img/portfolio/moroclininic_dashboard.png" alt="E-commerce Website" class="img-fluid portfolio-image" data-project="ecommerce">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-icons">
+                                <a href="#"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-modal-open" data-project="ecommerce"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="portfolio-content">
+                                <h4>Moro clinic System</h4>
+                                <p>A comprehensive healthcare management system esigned to streamline operations, enhance patient care, and improve efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item app">
+                    <div class="portfolio-wrap">
+                        <img src="img/portfolio/graphic_design.png" alt="Task Management App" class="img-fluid portfolio-image" data-project="taskapp">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-icons">
+                                <a href="#"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-modal-open" data-project="taskapp"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="portfolio-content">
+                                <h4>Posters Design</h4>
+                                <p>Creating customed posters, flyers and calenders for organization needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item design">
+                    <div class="portfolio-wrap">
+                        <img src="img/portfolio/moroclincs_home.png" alt="Restaurant Website" class="img-fluid portfolio-image" data-project="restaurant">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-icons">
+                                <a href="#"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-modal-open" data-project="restaurant"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="portfolio-content">
+                                <h4>Moroclinics Landingpage</h4>
+                                <p>A comprehensive healthcare management system designed to streamline operations, enhance patient care, and improve efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item web">
+                    <div class="portfolio-wrap">
+                        <img src="img/portfolio/photocopia_dashboard.png" alt="Real Estate Platform" class="img-fluid portfolio-image" data-project="realestate">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-icons">
+                                <a href="#"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-modal-open" data-project="realestate"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="portfolio-content">
+                                <h4>Photopia web App</h4>
+                                <p>Connects clients with talented photographers for all your photography needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item app">
+                    <div class="portfolio-wrap">
+                        <img src="img/portfolio/calender_design1.png" alt="Fitness Tracker" class="img-fluid portfolio-image" data-project="fitness">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-icons">
+                                <a href="#"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-modal-open" data-project="fitness"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="portfolio-content">
+                                <h4>Calender Design</h4>
+                                <p>Custom calender designs that fit every organization/institutions needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item design">
+                    <div class="portfolio-wrap">
+                        <img src="img/portfolio/moro_landing.png" alt="Portfolio Redesign" class="img-fluid portfolio-image" data-project="portfolio">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-icons">
+                                <a href="#"><i class="fas fa-link"></i></a>
+                                <a href="#" class="portfolio-modal-open" data-project="portfolio"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="portfolio-content">
+                                <h4>Moro tech company</h4>
+                                <p>We specialize in Management systems, CCTV and Internet Installations..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal Structure -->
+    <div id="projectModal" class="portfolio-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="gallery-container">
+                <div class="gallery-main">
+                    <div class="gallery-nav">
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <!-- Gallery main images will be inserted here by JavaScript -->
+                </div>
+                <div class="gallery-thumbs">
+                    <!-- Gallery thumbnails will be inserted here by JavaScript -->
+                </div>
+                <div class="modal-project-info">
+                    <!-- Project information will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Section -->
+    <section id="location">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center animate__animated animate__fadeIn">
+                    <h2>My Location</h2>
+                    <hr>
+                    <p>Based in Iten, Kenya - The Home of Champions</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft" data-wow-delay="0.3s">
+                    <div class="location-info">
+                        <h3><i class="fas fa-map-marker-alt me-2"></i>Iten, Kenya</h3>
+                        <p>Located in Elgeyo-Marakwet County, Iten is known worldwide as "The Home of Champions" for producing many Olympic and world-class long-distance runners.</p>
+                        <ul class="location-details">
+                            <li><i class="fas fa-globe me-2"></i><strong>Country:</strong> Kenya</li>
+                            <li><i class="fas fa-map me-2"></i><strong>County:</strong> Elgeyo-Marakwet</li>
+                            <li><i class="fas fa-mountain me-2"></i><strong>Elevation:</strong> 2,400 meters above sea level</li>
+                            <li><i class="fas fa-compass me-2"></i><strong>Coordinates:</strong> 0°40′N 35°31′E</li>
+                        </ul>
+                        <p>Working from this beautiful location allows me to combine the tranquility of the Kenyan highlands with global connectivity to serve clients worldwide.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight" data-wow-delay="0.3s">
+                    <div class="map-container">
+                        <!-- Google Maps iframe -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31915.35362089914!2d35.49368755!3d0.6701695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1781fb2d4e2b5899%3A0x90929fc5396276d6!2sIten!5e0!3m2!1sen!2ske!4v1678888888888!5m2!1sen!2ske" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center animate__animated animate__fadeIn">
+                    <h2>Contact Me</h2>
+                    <hr>
+                    <p>Have a project in mind? Let's talk about how I can help you achieve your goals.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Subject">
+                        <textarea class="form-control" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-x"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p>Copyright &copy; 2025 Felix Kandie. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Add the modal script -->
+    <script src="js/project_modal.js"></script>
+    <script>
+        // Preloader
+        $(window).on('load', function() {
+            $('.preloader').fadeOut(1000);
+        });
+
+        // Sticky navbar
+        $(window).on('scroll', function() {
+            if ($(this).scrollTop() > 100) {
+                $('.custom-navbar').addClass('sticky');
+            } else {
+                $('.custom-navbar').removeClass('sticky');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a.nav-link, a.navbar-brand, a.btn').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        document.querySelector(targetId).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Portfolio filtering
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+                const items = document.querySelectorAll('.portfolio-item');
+
+                items.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Animation on scroll
+        const animateElements = document.querySelectorAll('.animate__animated');
+        
+        function checkIfInView() {
+            const windowHeight = window.innerHeight;
+            const windowTopPosition = window.scrollY;
+            const windowBottomPosition = windowTopPosition + windowHeight;
+
+            animateElements.forEach(element => {
+                const elementHeight = element.offsetHeight;
+                const elementTopPosition = element.offsetTop;
+                const elementBottomPosition = elementTopPosition + elementHeight;
+
+                // Check if element is in view
+                if (
+                    elementBottomPosition >= windowTopPosition && 
+                    elementTopPosition <= windowBottomPosition
+                ) {
+                    // If element doesn't have any animation delay
+                    if (!element.dataset.wowDelay) {
+                        element.classList.add('animate__fadeIn');
+                    }
+                }
+            });
+        }
+
+        // Run check on scroll and on page load
+        window.addEventListener('scroll', checkIfInView);
+        window.addEventListener('load', checkIfInView);
+
+        // Initialize typed.js effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const typeText = document.querySelector('.type-text');
+            if (typeText) {
+                const roles = ['Web Developer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer'];
+                let currentRole = 0;
+                let currentChar = 0;
+                let isDeleting = false;
+                let typingSpeed = 100;
+
+                function typeWriter() {
+                    const role = roles[currentRole];
+                    
+                    if (isDeleting) {
+                        typeText.textContent = role.substring(0, currentChar - 1);
+                        currentChar--;
+                        typingSpeed = 50;
+                    } else {
+                        typeText.textContent = role.substring(0, currentChar + 1);
+                        currentChar++;
+                        typingSpeed = 100;
+                    }
+
+                    if (!isDeleting && currentChar === role.length) {
+                        isDeleting = true;
+                        typingSpeed = 1000;
+                    } else if (isDeleting && currentChar === 0) {
+                        isDeleting = false;
+                        currentRole = (currentRole + 1) % roles.length;
+                        typingSpeed = 500;
+                    }
+
+                    setTimeout(typeWriter, typingSpeed);
+                }
+
+                typeWriter();
+            }
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add form submission logic here
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
